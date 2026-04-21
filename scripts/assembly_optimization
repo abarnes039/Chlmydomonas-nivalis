@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # how many k-mers for ABySS
 kmergenie reads_list.txt -t 16 -o SRR14100018_kmer_report
 
