@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Trimming with fastp (Q30, length 100)
 fastp -i SRR14100018_1.fastq -I SRR14100018_2.fastq \
       -o SRR14100018_trimmed_1.fq.gz -O SRR14100018_trimmed_2.fq.gz \
