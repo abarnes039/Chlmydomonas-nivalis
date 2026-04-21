@@ -1,0 +1,10 @@
+# how many k-mers for ABySS
+kmergenie reads_list.txt -t 16 -o SRR14100018_kmer_report
+
+# De novo Assembly with SPAdes
+spades.py -1 ../fastp_results/SRR14100018_trimmed_1.fq.gz \
+          -2 ../fastp_results/SRR14100018_trimmed_2.fq.gz \
+          -o ../spades_results/
+
+# Comparative Assembly with ABySS (k=83)
+abyss-pe name=abyss_results k=83 j=16 in='trimmed_1.fq.gz trimmed_2.fq.gz'
