@@ -1,0 +1,21 @@
+Assembly	spades_ref_results_contigs	spades_results_contigs
+# misassemblies	0	0
+  # contig misassemblies	0	0
+    # c. relocations	0	0
+    # c. translocations	0	0
+    # c. inversions	0	0
+  # scaffold misassemblies	0	0
+    # s. relocations	0	0
+    # s. translocations	0	0
+    # s. inversions	0	0
+# misassembled contigs	0	0
+Misassembled contigs length	0	0
+# local misassemblies	0	0
+# scaffold gap ext. mis.	0	0
+# scaffold gap loc. mis.	0	0
+# unaligned mis. contigs	13	11
+# mismatches	1267	1280
+# indels	273	286
+    # indels (<= 5 bp)	273	286
+    # indels (> 5 bp)	0	0
+Indels length	488	507

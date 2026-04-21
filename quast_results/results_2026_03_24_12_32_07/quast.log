@@ -1,0 +1,142 @@
+/media/FatCat_1/opt//quast-5.3.0/quast.py -r /home/barnes/private/ref_genome/GCF_000002595.2_Chlamydomonas_reinhardtii_v5.5_genomic.fasta /home/barnes/private/spades_ref_results/contigs.fasta /home/barnes/private/spades_results/contigs.fasta
+
+Version: 5.3.0, c3eb988a
+
+System information:
+  OS: Linux-6.18.13-100.fc42.x86_64-x86_64-with-glibc2.41 (linux_64)
+  Python version: 3.13.12
+  CPUs number: 32
+
+Started: 2026-03-24 12:32:07
+
+Logging to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/quast.log
+NOTICE: Maximum number of threads is set to 8 (use --threads option to set it manually)
+
+CWD: /home/barnes/private
+Main parameters: 
+  MODE: default, threads: 8, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Reference:
+  /home/barnes/private/ref_genome/GCF_000002595.2_Chlamydomonas_reinhardtii_v5.5_genomic.fasta ==> GCF_000002595.2_Chlamydomonas_reinhardtii_v5.5_genomic
+
+Contigs:
+  Pre-processing...
+  1  /home/barnes/private/spades_ref_results/contigs.fasta ==> spades_ref_results_contigs
+  2  /home/barnes/private/spades_results/contigs.fasta ==> spades_results_contigs
+
+2026-03-24 12:32:12
+Running Basic statistics processor...
+  Reference genome:
+    GCF_000002595.2_Chlamydomonas_reinhardtii_v5.5_genomic.fasta, length = 111098438, num fragments = 53, GC % = 64.08
+WARNING:   Reference genome is fragmented. You may consider rerunning QUAST using --fragmented option. QUAST will try to detect misassemblies caused by the fragmentation and mark them fake (will be excluded from # misassemblies).
+  Contig files: 
+    1  spades_ref_results_contigs
+    2  spades_results_contigs
+  Calculating N50 and L50...
+    1  spades_ref_results_contigs, N50 = 28194, L50 = 1925, auN = 37013.9, Total length = 189687868, GC % = 56.32, # N's per 100 kbp =  0.00
+    2  spades_results_contigs, N50 = 29081, L50 = 1847, auN = 38627.5, Total length = 189763320, GC % = 56.32, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/basic_stats/GC_content_plot.pdf
+  Drawing spades_ref_results_contigs GC content plot...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/basic_stats/spades_ref_results_contigs_GC_content_plot.pdf
+  Drawing spades_results_contigs GC content plot...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/basic_stats/spades_results_contigs_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/basic_stats/coverage_histogram.pdf
+  Drawing spades_ref_results_contigs coverage histogram (bin size: 1x)...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/basic_stats/spades_ref_results_contigs_coverage_histogram.pdf
+  Drawing spades_results_contigs coverage histogram (bin size: 1x)...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/basic_stats/spades_results_contigs_coverage_histogram.pdf
+Done.
+
+2026-03-24 12:32:28
+Running Contig analyzer...
+  1  spades_ref_results_contigs
+  1  Logging to files /home/barnes/private/quast_results/results_2026_03_24_12_32_07/contigs_reports/contigs_report_spades_ref_results_contigs.stdout and contigs_report_spades_ref_results_contigs.stderr...
+  1  Aligning contigs to the reference
+  1  /media/FatCat_1/opt/quast-5.3.0/quast_libs/minimap2/minimap2 -c -x asm10 -B5 \
+     -O4,16 --no-long-join -r 200 -N 50 -s 65 -z 200 --mask-level 0.9 --min-occ 200 \
+     -g 2500 --score-N 2 --cs -t 4 quast_results/results_2026_03_24_12_32_07/quast_corrected_input/GCF_000002595.2_Chlamydomonas_reinhardtii_v5.5_genomic.fasta \
+     quast_results/results_2026_03_24_12_32_07/quast_corrected_input/spades_ref_results_contigs.fasta \
+     > quast_results/results_2026_03_24_12_32_07/contigs_reports/minimap_output/spades_ref_results_contigs.coords_tmp \
+     2>> quast_results/results_2026_03_24_12_32_07/contigs_reports/contigs_report_spades_ref_results_contigs.stderr
+  2  spades_results_contigs
+  2  Logging to files /home/barnes/private/quast_results/results_2026_03_24_12_32_07/contigs_reports/contigs_report_spades_results_contigs.stdout and contigs_report_spades_results_contigs.stderr...
+  2  Aligning contigs to the reference
+  2  /media/FatCat_1/opt/quast-5.3.0/quast_libs/minimap2/minimap2 -c -x asm10 -B5 \
+     -O4,16 --no-long-join -r 200 -N 50 -s 65 -z 200 --mask-level 0.9 --min-occ 200 \
+     -g 2500 --score-N 2 --cs -t 4 quast_results/results_2026_03_24_12_32_07/quast_corrected_input/GCF_000002595.2_Chlamydomonas_reinhardtii_v5.5_genomic.fasta \
+     quast_results/results_2026_03_24_12_32_07/quast_corrected_input/spades_results_contigs.fasta \
+     > quast_results/results_2026_03_24_12_32_07/contigs_reports/minimap_output/spades_results_contigs.coords_tmp \
+     2>> quast_results/results_2026_03_24_12_32_07/contigs_reports/contigs_report_spades_results_contigs.stderr
+  1  Analysis is finished.
+
+  2  Analysis is finished.
+
+  Creating total report...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2026-03-24 12:32:44
+Running NA-NGA calculation...
+  1  spades_ref_results_contigs, Largest alignment = 807, NA50 = None, LA50 = None
+  2  spades_results_contigs, Largest alignment = 400, NA50 = None, LA50 = None
+  Drawing cumulative plot...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/aligned_stats/NGAx_plot.pdf
+Done.
+
+2026-03-24 12:32:46
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  1  spades_ref_results_contigs
+  2  spades_results_contigs
+  1  Analysis is finished.
+  2  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2026-03-24 12:33:00
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2026-03-24 12:33:01
+RESULTS:
+  Text versions of total report are saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/report.html
+  PDF version (tables and plots) is saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/report.pdf
+  Icarus (contig browser) is saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/icarus.html
+  Log is saved to /home/barnes/private/quast_results/results_2026_03_24_12_32_07/quast.log
+
+Finished: 2026-03-24 12:33:02
+Elapsed time: 0:00:54.957641
+NOTICEs: 4; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

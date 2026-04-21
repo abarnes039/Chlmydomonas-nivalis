@@ -1,0 +1,71 @@
+/media/FatCat_1/opt/quast-5.3.0/quast.py /home/barnes/private/abyss_results/abyss_results-scaffolds.fa /home/barnes/private/spades_results/scaffolds.fasta -l ABySS,SPAdes -o /home/barnes/private/quast_comparison
+
+Version: 5.3.0, c3eb988a
+
+System information:
+  OS: Linux-6.19.10-100.fc42.x86_64-x86_64-with-glibc2.41 (linux_64)
+  Python version: 3.13.12
+  CPUs number: 32
+
+Started: 2026-04-09 13:15:13
+
+Logging to /home/barnes/private/quast_comparison/quast.log
+NOTICE: Maximum number of threads is set to 8 (use --threads option to set it manually)
+
+CWD: /home/barnes/private
+Main parameters: 
+  MODE: default, threads: 8, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Contigs:
+  Pre-processing...
+  1  /home/barnes/private/abyss_results/abyss_results-scaffolds.fa ==> ABySS
+  2  /home/barnes/private/spades_results/scaffolds.fasta ==> SPAdes
+
+2026-04-09 13:15:18
+Running Basic statistics processor...
+  Contig files: 
+    1  ABySS
+    2  SPAdes
+  Calculating N50 and L50...
+    1  ABySS, N50 = 15098, L50 = 3431, auN = 21278.9, Total length = 188927205, GC % = 56.30, # N's per 100 kbp =  56.58
+    2  SPAdes, N50 = 34405, L50 = 1583, auN = 44954.9, Total length = 189970187, GC % = 56.32, # N's per 100 kbp =  100.09
+  Drawing Nx plot...
+    saved to /home/barnes/private/quast_comparison/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/barnes/private/quast_comparison/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/barnes/private/quast_comparison/basic_stats/GC_content_plot.pdf
+  Drawing ABySS GC content plot...
+    saved to /home/barnes/private/quast_comparison/basic_stats/ABySS_GC_content_plot.pdf
+  Drawing SPAdes GC content plot...
+    saved to /home/barnes/private/quast_comparison/basic_stats/SPAdes_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /home/barnes/private/quast_comparison/basic_stats/coverage_histogram.pdf
+  Drawing SPAdes coverage histogram (bin size: 1x)...
+    saved to /home/barnes/private/quast_comparison/basic_stats/SPAdes_coverage_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2026-04-09 13:15:28
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2026-04-09 13:15:29
+RESULTS:
+  Text versions of total report are saved to /home/barnes/private/quast_comparison/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/barnes/private/quast_comparison/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/barnes/private/quast_comparison/report.html
+  PDF version (tables and plots) is saved to /home/barnes/private/quast_comparison/report.pdf
+  Icarus (contig browser) is saved to /home/barnes/private/quast_comparison/icarus.html
+  Log is saved to /home/barnes/private/quast_comparison/quast.log
+
+Finished: 2026-04-09 13:15:29
+Elapsed time: 0:00:15.862544
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

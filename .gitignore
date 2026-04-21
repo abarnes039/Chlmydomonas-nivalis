@@ -1,3 +1,10 @@
+# Ignore entire large data/result directories
+raw_data/
+spades_results/
+spades_ref_results/
+abyss_results/
+taxonomized_blast/
+
 # Ignore raw sequences and large binaries
 *.fastq
 *.fq.gz
@@ -5,3 +12,4 @@
 *.fna
 *.bam
 *.zip
+*.fa
