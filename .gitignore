@@ -1,0 +1,7 @@
+# Ignore raw sequences and large binaries
+*.fastq
+*.fq.gz
+*.fasta
+*.fna
+*.bam
+*.zip
